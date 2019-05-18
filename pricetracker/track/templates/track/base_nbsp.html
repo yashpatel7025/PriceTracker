@@ -1,0 +1,138 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+
+      <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+   <link rel="stylesheet" href="{% static 'styles2.css' %}">
+
+
+
+	{% if title %}
+	      <title>{{title}}</title>
+	{% else %}
+	      <title>django track</title>
+
+	{% endif %}
+</head>
+<body>
+
+
+             <header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+	    
+      
+          &nbsp; &nbsp; &nbsp;
+        <a href="{% url 'track-home' %}"><img src="\media\logo3.png" class="img-responsive"width="65" height="50"></a>
+   
+
+
+
+         &nbsp;
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="navbarToggle">
+	        <div class="navbar-nav mr-auto">
+	          <a class="nav-item nav-link" href="{% url 'track-home' %}">Home</a>
+	          <a class="nav-item nav-link" href="{%url 'track-about' %}">About</a>
+
+
+
+	        </div>
+	        <!-- Navbar Right Side -->
+	        <div class="navbar-nav">
+	        {% if user.is_authenticated %}<!--check whether user is loged in or not-->
+
+                
+             <a  class="nav-item nav-link" href="{% url 'user-products' user.username %}">Your products</a>
+                
+	                  <a class="nav-item nav-link" href="{%url 'product-create'%}">New Product</a>
+	                  <a class="nav-item nav-link" href="{%url 'profile'%}">Profile</a>
+                 	  <a class="btn btn-outline-danger" href="{%url 'logout'%}">Logout</a>
+	        {%else%}
+
+			          <a class="nav-item nav-link" href="{%url 'login'%}">Login</a>
+                <a class="btn btn-outline-success" href="{%url 'register'%}">Register</a>
+			         
+			{%endif%}
+	        </div>
+	      </div>
+	    </div>
+  </nav>
+</header>
+
+
+
+
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8">
+
+
+    	{% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}{% endblock %}<!--   only this line is different in home.html and about.html-->
+    </div>
+
+    {% if user.is_authenticated %}
+
+           <div class="col-md-4">
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+    
+               
+            
+        
+          
+    
+                <div class="content-section">
+                 <h3>More on TRACKASS</h3>
+        <p class='text-muted'> explore more on TRACKASS</p>
+                    <ul class="list-group">
+
+                   <div class="d-flex justify-content-center">
+                      <a href="{% url 'track-home' %}"><img src="\media\logo3.png" class="img-responsive"width="170" height="150"></a>
+                   </div>
+                   <p></p>   
+                      
+<div class="btn-group-vertical">
+  <a href="{%url 'track-list-all-products'%}"class="btn btn-outline-dark">Community Products</a>
+  <a href="{%url 'track-announcements'%}" class="btn btn-outline-dark">Announcements</a>
+  <a href="{%url 'track-why'%}" class="btn btn-outline-dark">Why Do You Need Pricetracking</a>
+  <a href="{%url 'track-benefits'%}" class="btn btn-outline-dark">Benefits of Tracking</a>
+</div>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+
+
+    {%endif%}
+
+
+  </div>
+</main>  
+    
+
+         <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</body>
+</html>

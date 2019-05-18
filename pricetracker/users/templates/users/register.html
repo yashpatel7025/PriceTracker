@@ -1,0 +1,31 @@
+{% extends "track/base.html" %}
+{%load crispy_forms_tags%}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="{%url 'login'%}">Sign In</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
+
+<!--here we are not writig
+ action="/action_page"--><!--bcoz we are giving data to same page and we have written
+ logic for post request in the same def profile() in our views.py 
+ #therefore here after submit it will again go to same url and execute profile(). but method will be post post request..
+
+ if we want to send data to another page then we have to write action="/action_page
+    then dat will go to action-page and we would have retreived it thier"-->
+

@@ -1,0 +1,29 @@
+{% extends "track/base.html" %}
+{%load crispy_forms_tags%}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Add Product To Track</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                
+                
+                
+                    <!--i have done this all to button bcoz it take long time to add prodcut ..
+                    if i add spinner 
+                    then user will come to know that process is going on,otherwise he assumes that net is down--> 
+                    <button href="#demo" class="btn btn-outline-dark" data-toggle="collapse" type="submit">Add</a>
+                      <span id="demo" class="collapse">
+                        <span class="text-info">
+                            <div class="spinner-border  spinner-border-sm  text-info"></div><!--spinner-->
+                        </span>
+                      </span>
+                      <!--when you dont want to use <p> or <div> tag bcoz it will print in another line ..if u dont wnt to do that then just use <span> span means nothing ..it is like placeholder tag....by writing this you ill get everythin in 1 line-->
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,155 @@
+{% extends "track/base_nbsp.html" %}
+{% block content %}
+
+<h1 class="mb-3">total Product Results ({{ page_obj.paginator.count }})</h1>
+    {% for product in products %}
+
+        
+        <article class="media content-section">
+          
+          <div class="media-body">
+            
+              
+              <span class="mr-2" >{{ product.author }}</span>
+              <!--when e click on post.author only posts from this user will be shown-->
+              <small class="text-muted">{{ product.date_posted|date:"F d, Y" }}</small>
+           
+     
+
+       {% if user.is_authenticated %}<!--check whether user is loged in or not-->
+                 {% if product.author == user %}
+                   &nbsp;<a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'product-update' product.id %}">Update</a>&nbsp;
+      <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'product-delete' product.id %}">Delete Product</a>
+                  {%endif%}
+        
+      {%endif%}
+      
+  
+
+          
+
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title"></h4>
+         <div class="media">
+
+          <img src="{{ product.img_src }}" class="rounded" alt="Cinque Terre" width="165" height="250"> 
+               <div class="media-body">
+
+                     <div class="container">
+                        <div class="container">
+                            <ul class="list-group">
+                                <li class="list-group-item "><h5>Title:- {{ product.title }}</h5></li>
+                               <!--use 2 conatiner to get space after photo -->
+                            </ul>        
+
+          <ul class="list-group list-group-flush">
+
+
+
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Current Price :-<span class="text-danger">{{product.current_price}}</span></li><!--span is used bcoz i wanated price on same line if i use <p>then it goes to new line-->
+        
+               <li class="list-group-item">Desired Price :- <span class="text-info">{{ product.desire_price  }} </span>
+                     &nbsp;
+                    <a href="#demo" class="btn btn-outline-info btn-sm" data-toggle="collapse">Note</a>
+                    
+                    
+                      <div id="demo" class="collapse">
+                        <p class="text-info">we will notify you via email once price drops to desire price or lower</p>
+                      </div>
+                </li>
+                <li class="list-group-item">Email :- {{ product.author.email }}</li>
+                <li class="list-group-item">
+
+                        <a href="{{ product.product_url }}" class="btn btn-outline-dark">Go To Product</a>
+
+                        <a href="{{ product.img_src }}" class="btn btn-outline-dark">View Product Image</a>
+                </li>
+
+
+                          
+           </ul>
+                                 
+                        </div>
+                     </div>
+               </div>
+         </div>
+      <p class="card-text"></p>
+     
+    </div>
+  </div>
+
+             </div>
+        </article>
+    {% endfor %}
+           
+             
+             
+                
+         
+
+
+
+
+
+
+    <!--frohomepage to multiple page...code for that buttons 1,2,next,last-->
+    {% if is_paginated %}
+
+      {% if page_obj.has_previous %}
+        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+      {% endif %}
+
+      {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+          <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+          <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+      {% endif %}
+
+    {% endif %}
+
+
+
+
+    
+{% endblock content %}
+
+
+
+
+
+
+<!--this is template.......reside in blog -> templates -> blog ->home.html.....this django convention-->
+<!--enter html +tab to get basic htmlcode-->
+<!--
+
+<!DOCTYPE html>
+<html>
+<head>
+	{% if title %}
+	      <title>{{title}}</title>
+	{% else %}
+	      <title>django blog</title>
+
+	{% endif %}
+</head>
+<body>
+        {% for post in posts %}
+            <h1>{{post.title}}</h1>
+            <p>By {{post.author}} on {{post.date}}</p>
+            <p>{{post.contents}}</p>
+        {% endfor %}
+</body>
+</html>
+
+-->
+
