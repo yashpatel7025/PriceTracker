@@ -1,1 +1,1 @@
-web: gunicorn --bind myproject.wsgi:application
+web: gunicorn --bind price.wsgi:application
