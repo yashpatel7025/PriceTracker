@@ -21,10 +21,12 @@ cycler==0.10.0
 DateTime==4.3
 decorator==4.4.0
 defusedxml==0.6.0
+dj-database-url==0.5.0
 Django==2.1.7
 django-background-tasks==1.2.0
 django-compat==1.0.15
 django-crispy-forms==1.7.2
+django-heroku==0.3.1
 django-storages==1.7.1
 docutils==0.14
 entrypoints==0.3
@@ -66,6 +68,7 @@ pickleshare==0.7.5
 Pillow==6.0.0
 prompt-toolkit==2.0.9
 psutil==5.6.2
+psycopg2==2.8.2
 pyasn1==0.4.5
 pyasn1-modules==0.2.5
 pycodestyle==2.5.0
@@ -122,6 +125,7 @@ w3lib==1.20.0
 wcwidth==0.1.7
 webencodings==0.5.1
 websockets==7.0
+whitenoise==4.1.2
 wrapt==1.11.1
 zipp==0.5.1
 zope.interface==4.6.0
