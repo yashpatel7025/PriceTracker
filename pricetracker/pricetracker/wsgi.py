@@ -1,5 +1,5 @@
 """
-WSGI config for pricetracker project.
+WSGI config for django_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
