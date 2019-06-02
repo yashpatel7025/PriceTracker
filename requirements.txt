@@ -82,9 +82,11 @@ PyQt5-sip==4.19.17
 PyQtWebEngine==5.12.1
 pyrsistent==0.15.2
 python-dateutil==2.8.0
+python-dotenv==0.10.2
 python-scrapyd-api==2.1.2
 pytz==2019.1
-
+pywin32==223
+pywin32-ctypes==0.2.0
 pyzmq==18.0.1
 QtAwesome==0.5.7
 qtconsole==4.5.1
