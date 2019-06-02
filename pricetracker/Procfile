@@ -1,1 +1,1 @@
-web: gunicorn pricetracker.wsgi:application
+web: gunicorn pricetracker.wsgi
