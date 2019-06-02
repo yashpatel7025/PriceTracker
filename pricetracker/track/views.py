@@ -99,8 +99,10 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
    
         
         setup()
+        print('hello'*10)
         
         if form==-1: 
+          
           url=self.product_url
 
           settings = {
@@ -154,7 +156,8 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
               """Activates on spider closed signal"""
               print("Spiderclose"*10)
               #reactor.stop()
-
+          def if_spyder_open(spider):
+            print("spyderOpen__"*10)
         
        # settings = Settings()
        #settings.set("USER_AGENT", "Kiran Koduru (+http://kirankoduru.github.io)")
@@ -162,15 +165,18 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
           ulen1=len(u.product_set.all())
 
           crawler = Crawler(autoscrap.AutoScrap,settings)
+
           
           crawler.signals.connect(spider_closing, signal=signals.spider_closed)
+          crawler.signals.connect(if_spyder_open,signal=signals.spider_opened)
 
           crawler.crawl(url=url,d_price=d_price,author=self.request.user,check=0,timepass='whats up..!!')
 
         
         #reactor.run()
-        
+          
           while True:
+                print(crawler.stats.get_stats())
                 time.sleep(1)
                 #print(crawler.stats.get_stats())
                 try:

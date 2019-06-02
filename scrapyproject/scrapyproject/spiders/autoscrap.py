@@ -38,6 +38,7 @@ class AutoScrap(scrapy.Spider):
 			print('2'*50)
 			self.start_urls=[self.url]
 			self.author=kwargs.get('author')
+			#print('2end'*20)
 
 			#print(self.url)
 			#print(self.d_price)

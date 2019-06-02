@@ -15,7 +15,7 @@ class Product(models.Model):
 	#content=models.TextField()
 	current_price=models.FloatField(max_length=30)
 	product_url=models.URLField(max_length=1000)
-	img_src=models.ImageField()
+	img_src=models.URLField(max_length=1000)
 	desire_price=models.FloatField(max_length=30)
 	date_posted=models.DateTimeField(default=timezone.now)
 	author=models.ForeignKey(User,on_delete=models.CASCADE)

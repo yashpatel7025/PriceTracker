@@ -20,10 +20,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9rnmb%oze35^wi^9p3fy2p-z2=j=-x)+j869@4r9!n8nfia=f%'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = Falses
 
 ALLOWED_HOSTS = []
 
@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -142,11 +144,26 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER ='yashwadia7025@gmail.com'
+EMAIL_HOST_USER =''
 EMAIL_HOST_PASSWORD = ''
 
 AWS_ACCESS_KEY_ID = ""
 AWS_SECRET_ACCESS_KEY = ""
 AWS_STORAGE_BUCKET_NAME = ""
 
+AWS_S3_FILE_OVERWRITE=False
+AWS_DEFAULT_ACL=None
+
+#whatever the imagefield is there in database or models.py, those will be come from aws s3 bucket ,not img_url field ,this will
+#come from local file.
+
+
+#note that heroku supports statis files....i mean if there is any static file or media file,
+#then heroku supports that files ,only if user want to uplaod new images or files or pdf then it is 
+#not possible in heroku
+#if you are showing images or pdf from alraedy uploaded manually media files into heroku then yes it will show
+#those media pdf and images,,,,only new uploadation not allowed.
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+S3_USE_SIGV4 = True
+AWS_S3_REGION_NAME=''
 
