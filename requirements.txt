@@ -84,7 +84,7 @@ pyrsistent==0.15.2
 python-dateutil==2.8.0
 python-scrapyd-api==2.1.2
 pytz==2019.1
-pypiwin32
+
 pyzmq==18.0.1
 QtAwesome==0.5.7
 qtconsole==4.5.1
