@@ -33,7 +33,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7c1b0c077bef519710b48c6fdac6bb7b501e6f4a3bb8540b'#os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv('DEBUG')
+DEBUG = True#os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['trackass-heroku.herokuapp.com','127.0.0.1']
 
