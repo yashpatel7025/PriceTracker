@@ -3,6 +3,7 @@
 Twisted-19.2.0-cp37-cp37m-win_amd64.whl
 v_env_trackass3
 .env   
+*.pyc
 #<---.env has all credential AWS keys,security keys
 
 #added by me ends
