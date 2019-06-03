@@ -8,13 +8,13 @@ https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/
 """
 
 import os
-import sys
-sys.path.append("C:/Users/Aakash/Desktop/trackass/pricetracker/pricetracker")
+
+
 
 print('@'*50)
-
+import pricetracker.settings
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'settings')
 
-application = get_wsgi_application()
+#application = get_wsgi_application()
