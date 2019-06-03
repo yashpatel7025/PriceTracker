@@ -15,6 +15,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import dotenv# we have dowloaded python-dotenv package from pip
 import os
 import sys
+print("*"*100)
 
 dotenv.load_dotenv()# we have dowloaded python-dotenv package from pip ,
                     #this loads all variables from .env to os,and we retrive this from
@@ -40,6 +41,9 @@ DEBUG = True#os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['trackass-heroku.herokuapp.com','127.0.0.1']
 
+
+import sys
+sys.path.append("C:/Users/Aakash/Desktop/trackass/pricetracker")
 
 # Application definition
 
