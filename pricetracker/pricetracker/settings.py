@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pricetracker.wsgi.application'
+WSGI_APPLICATION = 'pricetracker.wsgi.applicatio'
 
 
 # Database
@@ -181,7 +181,6 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 S3_USE_SIGV4 = True
 AWS_S3_REGION_NAME=os.getenv('AWS_S3_REGION_NAME')
 
-import sys
-sys.path.append("C:/Users/Aakash/Desktop/trackass/pricetracker")
+
 
 django_heroku.settings(locals())
