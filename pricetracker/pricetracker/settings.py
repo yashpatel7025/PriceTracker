@@ -89,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pricetracker.wsgi.applicatio'
+WSGI_APPLICATION = 'pricetracker.wsgi.application'
 
 
 # Database
