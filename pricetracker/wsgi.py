@@ -11,8 +11,10 @@ import os
 
 
 
-print('@'*50)
+#print('@'*50)
 import pricetracker.settings
+print('@'*50)
+print(os.getcwd())
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pricetracker.settings')
