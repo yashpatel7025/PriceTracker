@@ -76,7 +76,7 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
         from uuid import uuid4
         import time
         import sys
-        sys.path.append("C:/Users/Aakash/Desktop/trackass/scrapyproject")
+        sys.path.append("C:/Users/Aakash/Desktop/pricetracker-test/scrapyproject")
         from scrapyproject.spiders import autoscrap
         from scrapyproject.pipelines import  ScrapyprojectPipeline
 
