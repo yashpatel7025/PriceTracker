@@ -41,7 +41,7 @@ urlpatterns = [
      path('bgt/',include('background.background_urls')),
    ]
 
-kya()
+#kya()
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
