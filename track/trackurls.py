@@ -26,6 +26,6 @@ urlpatterns = [
     #path('okjson/',views.okjson,name='okjson'),
     #path('okjson2/',views.okjson2,name='okjson2')'''
     #path('my/',views.my,name='my'),
-path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
-     path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
+path(r'^media/(?P<path>.*)$', serve,{'document_root': pricetracker.settings.MEDIA_ROOT}), 
+     path(r'^static/(?P<path>.*)$', serve,{'document_root': pricetracker.settings.STATIC_ROOT}),
 ]

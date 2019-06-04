@@ -79,6 +79,7 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
 
         import sys
         #this path will remain in sys.path untill this program terminated
+        sys.path.append("/app")
         sys.path.append("/app/scrapyproject")#in heroku we have base dir as /app
         sys.path.append("C:/Users/Aakash/Desktop/trackass/scrapyproject")#for testing in my local
                                                                                    #system
