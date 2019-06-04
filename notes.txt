@@ -5,14 +5,28 @@
 -> heroku apps
 -> heroku apps:info
 -> heroku create projectname
+
+
+->create new branch
+First, you create your branch locally:
+       (git checkout -b <branch-name> # Create a new branch and check it out)
+The remote branch is automatically created when you push it to the remote server. So when you feel ready for it, you can just do:
+         (git push <remote-name> <branch-name> )
+->git checkout -b mybranch(to switch to another branch)
+->git push <remote_name> --delete <branch_name>(to delete branch e.g git push origin --delete mynewbranch)
+-> git checkout master(switch back to master branch)
+
+
 -> git remote -v
 ->git remote add origin githubURL(to add you github repo)
 ->
+
 ->heroku git:remote -a projectname(for already existing project on heroku)
 ->git remote -v(now heroku  https://git.heroku.com/projectname.git (fetch)
                      heroku  https://git.heroku.com/projectname.git (push)
                )
 ->ORRRRR git remote add heroku herokuWebURL(to add you Herokuproject repo)
+
 ->git add *(first time)
 ->git add -A(changes will be added)
 ->git status
