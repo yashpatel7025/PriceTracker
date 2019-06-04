@@ -26,6 +26,7 @@ from background.views import hello,kya
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('bgt/',include('background.background_urls')),
@@ -39,10 +40,11 @@ urlpatterns = [
          name='password_reset'),
 
      path('bgt/',include('background.background_urls')),
+     
    ]
 
 #kya()
 
-if settings.DEBUG:
+if not settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns+=staticfiles_urlpatterns()
