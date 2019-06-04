@@ -82,6 +82,7 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
         sys.path.append("/app/scrapyproject")#in heroku we have base dir as /app
         sys.path.append("C:/Users/Aakash/Desktop/trackass/scrapyproject")#for testing in my local
                                                                                    #system
+         #this path will be used in scrapyproject.items,                                                                          
         from scrapyproject.spiders import autoscrap
         from scrapyproject.pipelines import  ScrapyprojectPipeline
 
