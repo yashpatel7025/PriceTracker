@@ -28,5 +28,6 @@
                  you have to logout using commnad)
 ->heroku git:clone -a myapp (clone existing project....this will be done when you want to work on project from another pc.....
                              when you dont have you local repo and your peronal pc)
+-> heroku open(open website)
 
 for more commands------->  https://devcenter.heroku.com/articles/heroku-cli-commands
