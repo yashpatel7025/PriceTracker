@@ -15,7 +15,7 @@ The remote branch is automatically created when you push it to the remote server
 ->git checkout -b mybranch(to switch to another branch)
 ->git push <remote_name> --delete <branch_name>(to delete branch e.g git push origin --delete mynewbranch)
 -> git checkout master(switch back to master branch)
-
+->git branch -a (to list all remote branches)
 
 -> git remote -v
 ->git remote add origin githubURL(to add you github repo)
