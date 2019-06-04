@@ -6,7 +6,7 @@ from .views import (ProductListView,
                     ProductDeleteView,
                     UserProductListView,
                     )
-
+from django.views.static import serve 
 urlpatterns = [
     path('',views.first_view,name='track-home'),
     path('all/', ProductListView.as_view(), name='track-list-all-products'),
@@ -26,5 +26,6 @@ urlpatterns = [
     #path('okjson/',views.okjson,name='okjson'),
     #path('okjson2/',views.okjson2,name='okjson2')'''
     #path('my/',views.my,name='my'),
-
+path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}), 
+     path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
 ]
