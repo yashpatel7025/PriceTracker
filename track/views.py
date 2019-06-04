@@ -75,8 +75,13 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
         from scrapyd_api import ScrapydAPI
         from uuid import uuid4
         import time
+
+
         import sys
-        sys.path.append("/app/scrapyproject")
+        #this path will remain in sys.path untill this program terminated
+        sys.path.append("/app/scrapyproject")#in heroku we have base dir as /app
+        sys.path.append("C:/Users/Aakash/Desktop/trackass/scrapyproject")#for testing in my local
+                                                                                   #system
         from scrapyproject.spiders import autoscrap
         from scrapyproject.pipelines import  ScrapyprojectPipeline
 
@@ -155,6 +160,9 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
           def spider_closing(spider):
               """Activates on spider closed signal"""
               print("Spiderclose"*10)
+              #import sys        #here as well, we can see both path on terminal added to sys.path ,
+                                 #we added both in track.views.it will remain untill program terminated.
+              #print(sys.path)
               #reactor.stop()
           def if_spyder_open(spider):
             print("spyderOpen__"*10)

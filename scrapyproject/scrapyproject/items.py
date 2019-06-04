@@ -24,13 +24,18 @@ from scrapy_djangoitem import DjangoItem
 #and import sys
 #sys.path command will give all path
 
-import sys
-sys.path.append("C:/Users/Aakash/Desktop/pricetracker-test")
+
+
 #similarly we have to add 'pricetracker.settings' in environment variables
 #to access models.py file fromjango project
 #we dont have access of this files if we dont set environment variable DJANGO_SETTINGS_MODULE
 #we also have to django.setup() in settings to access models.py
 #this path also gets deleted onec program is over
+import sys
+print('@'*50)
+print(sys.path)
+
+
 import os
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pricetracker.settings'
 

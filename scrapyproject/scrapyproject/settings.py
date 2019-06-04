@@ -107,8 +107,6 @@ django.setup()
 '''
 
 
-import sys
-sys.path.append("C:/Users/Aakash/Desktop/pricetracker-test/")
 import os
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pricetracker.settings'
 
