@@ -88,7 +88,7 @@ python-dateutil==2.8.0
 python-dotenv==0.10.2
 python-scrapyd-api==2.1.2
 pytz==2019.1
-                                  //remove pywin32 while deploying.....or while running requirements.txt in production....heroku doesnt support pyin32
+                                
 pyzmq==18.0.1
 QtAwesome==0.5.7
 qtconsole==4.5.1

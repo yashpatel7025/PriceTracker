@@ -1,0 +1,32 @@
+-> remove pywin32 while deploying.....or while running requirements.txt in production....heroku doesnt support pyin32
+
+-> heroku login
+-> git init 
+-> heroku apps
+-> heroku apps:info
+-> heroku create projectname
+-> git remote -v
+->heroku git:remote -a projectname(for already existing project on heroku)
+->git remote -v(now heroku  https://git.heroku.com/projectname.git (fetch)
+                     heroku  https://git.heroku.com/projectname.git (push)
+               )
+->git add *(first time)
+->git add -A(changes will be added)
+->git status
+->git commit -m"message"
+-> git push heroku master
+->heroku restart
+->heroku logs --tail (Similar to tail -f, real-time tail displays recent logs and leaves the session open for real-time logs to stream in. 
+                      By viewing a live stream of logs from your app, you can gain insight into the behavior of your live application and debug current problems.)
+->heroku config(all environments varibales set into heroku)
+->heroku run bash(to access our project on heroku server)
+->heroku run [commnad to run on heroku server] (e.g heroku run python manage.py migrate)(this will be run on server )
+->heroku addons(data base info)
+-> heroku pg
+
+->heroku logout(to completely logout from heroku CLI(i.e Command Line Interface).....if you log out manually from website than it will not logged ot from CLI
+                 you have to logout using commnad)
+->heroku git:clone -a myapp (clone existing project....this will be done when you want to work on project from another pc.....
+                             when you dont have you local repo and your peronal pc)
+
+for more commands------->  https://devcenter.heroku.com/articles/heroku-cli-commands
