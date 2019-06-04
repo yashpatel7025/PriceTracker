@@ -6,10 +6,13 @@
 -> heroku apps:info
 -> heroku create projectname
 -> git remote -v
+->git remote add origin githubURL(to add you github repo)
+->
 ->heroku git:remote -a projectname(for already existing project on heroku)
 ->git remote -v(now heroku  https://git.heroku.com/projectname.git (fetch)
                      heroku  https://git.heroku.com/projectname.git (push)
                )
+->ORRRRR git remote add heroku herokuWebURL(to add you Herokuproject repo)
 ->git add *(first time)
 ->git add -A(changes will be added)
 ->git status
@@ -28,6 +31,5 @@
                  you have to logout using commnad)
 ->heroku git:clone -a myapp (clone existing project....this will be done when you want to work on project from another pc.....
                              when you dont have you local repo and your peronal pc)
--> heroku open(open website)
 
 for more commands------->  https://devcenter.heroku.com/articles/heroku-cli-commands
