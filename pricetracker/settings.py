@@ -38,8 +38,13 @@ SECRET_KEY = os.getenv('SECRET_KEY')#os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG=bool(os.environ.get('DEBUG', ''))
-print(DEBUG)
-   
+print(f'debug is {DEBUG*5}')#heroku-django-uploaded image is not displayed if DEBUG=False
+
+#if you set DEBUG=True or False in heroku config then bool(os.environ.get('DEBUG', '')) will be True
+#bcoz os.environ.get('DEBUG')give sting value ,'True'or 'False'...DEBUG should be boolean value
+#bool('True')==bool('false') gives True.....bool('') gives False
+#otherwise if not set than bool(os.environ.get('DEBUG', '')) will be False coz bool('') is false.
+#and if it is false heroku-django-uploaded image will not be displayed in website in production
 
 
 
@@ -65,7 +70,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'storages',
+    'storages', #storages and boto3 are used for interacting to AWS
 ]
 
 MIDDLEWARE = [
@@ -77,7 +82,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    'whitenoise.middleware.WhiteNoiseMiddleware', #add whitenoise
+    
 ]
 
 ROOT_URLCONF = 'pricetracker.urls'
