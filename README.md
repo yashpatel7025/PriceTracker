@@ -5,5 +5,5 @@ TRACKASS (Amazon Price Tracker) which keeps track of amazon product user want to
 it helps user to save time as they don't need to manually open the amazon.in and check drop in price everyday, they just need to copy the URL of product and add to tracker, as soon as price drops user gets notified and can buy product before everyone else does and before product gets out of stock, user can add unlimited products from amazon.in for which he/she wants to track the price.
 
 # Future work
-Integrate Flipkart.com and other popular e-commerce websites in india
+Integrate Flipkart.com, AJIO.com, Snapdeal.com and other popular e-commerce websites in india
 
