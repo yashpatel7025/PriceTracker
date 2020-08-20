@@ -1,4 +1,4 @@
--> remove pywin32 while deploying.....or while running requirements.txt in production....heroku doesnt support pyin32
+-> remove pywin32 while deploying.....or while running requirements.txt in production....heroku doesnt support pyin32.....https://www.lfd.uci.edu/~gohlke/pythonlibs/   for all whl links
 
 -> heroku login
 -> git init 
