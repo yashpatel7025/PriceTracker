@@ -8,4 +8,6 @@ it helps user to save time as they don't need to manually open the amazon.in and
 # Future work
 Integrate Flipkart.com, AJIO.com, Snapdeal.com and other popular e-commerce websites in india
 
+<img src="https://drive.google.com/file/d/12MKTEbgNPR0mJTLcAlQdo7AWl6RjWm9t/view?usp=sharing" width="800" height="400">
+
 
