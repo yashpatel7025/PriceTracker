@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# PriceTracker
-Amazon Price tracker using Python, Django and Scrapy Frameworks.Front end is made using HTML,CSS,and Bootstrap
 
-TRACKASS (Amazon Price Tracker) which keeps track of amazon product user want to purchase at particular price,when price drops to that price it notifys the user via email
-=======
 # PriceTracker
 Amazon Price tracker using Python, Django, Celery Task Queue and Scrapy Frameworks.Frontend is developed using HTML,CSS,and Bootstrap
 
@@ -13,4 +8,6 @@ it helps user to save time as they don't need to manually open the amazon.in and
 # Future work
 Integrate Flipkart.com, AJIO.com, Snapdeal.com and other popular e-commerce websites in india
 
->>>>>>> 6fe48d8e7247b89825f3086fe0f6d73e7f239a25
+<img src="https://drive.google.com/file/d/12MKTEbgNPR0mJTLcAlQdo7AWl6RjWm9t/view" width="800" height="400">
+
+
