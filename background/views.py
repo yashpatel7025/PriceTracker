@@ -10,7 +10,7 @@ from track.views import ProductCreateView
 
 
 @background(schedule=60)
-def hello():
+def run_task():
   all_products=Product.objects.all()
   for p in  all_products:
 			myurl= p.product_url
@@ -19,33 +19,23 @@ def hello():
 		     										  #current_price through list 
 			p.current_price=float(p.current_price)
 			try:
-				if p.current_price<=p.desire_price:
-						print("ail")	
+				if p.current_price<=p.desire_price:	
 						subject='woohoo..! Price Dropped'
 						message=f'Price Dropped for product {p.title}..Grab it now '
 						from_email=settings.EMAIL_HOST_USER 
-						print("ail")
 						recipients_list=['yashpatel7025@gmail.com']
-						print("before send")
 						send_mail(subject, message, from_email,recipients_list)
-						print("mail sent")
 			except:
-			 	print(f'price for product {p.title} is not validdddddddddddd ')  
+			 	pass  
 
 def background_view(request):
-	hello()
-	#return  HttpResponse("hello world")
+	run_task()
 
 
 @background(schedule=20)
-def kya():
-	all_products=Product.objects.all()
-
+def bg_task_run_view():
+	all_products = Product.objects.all()
 	for index,p in  enumerate(all_products):
-		print("--------{}------------".format(index))
-		print(p)#it will print title bcoz we have returned self.title in models.py
-		
-		
 		ProductCreateView.new_product(p,-1)
 
 		
