@@ -11,7 +11,7 @@ Integrate Flipkart.com, AJIO.com, Snapdeal.com and other popular e-commerce webs
 <hr>
 
 - Below screen shows Total 12 Prodcts are tracked by website for user yashpatel7025, and one of the product that has been tracked is shown below with 
-``name,price, product image`` are scraped from ***Amazon.in*** and it will continue to scrap it ***every 15 minutes***
+``Name, Price, Product Image`` are scraped from ***Amazon.in*** and it will continue to scrap it ***every 15 minutes***
 
 <img src="./User_interface_Images_of_Web_View/1.JPG" width="1000" height="500">
 
@@ -29,6 +29,6 @@ Integrate Flipkart.com, AJIO.com, Snapdeal.com and other popular e-commerce webs
 
 ---
 
-- User can easily copy the **link/URL*** of the product he wants to track from amazon.in and add it to our website with ***desire price***
+- User can easily copy the **link/URL** of the product he wants to track from amazon.in and add it to our website with ***desire price***
 
 <img src="./User_interface_Images_of_Web_View/3.JPG" width="950" height="500">
