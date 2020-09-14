@@ -100,11 +100,7 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
        
 
         #print(self.request.POST)
-        
-
-
-   
-        
+      
         setup()
         print('hello'*10)
         
@@ -155,9 +151,6 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
                   'timepass':'kya chal raha hai bhai'
               }
 
-      
-        
-
 
           def spider_closing(spider):
               """Activates on spider closed signal"""
@@ -206,13 +199,7 @@ class ProductCreateView(LoginRequiredMixin,CreateView):#<app>/<model>_form.html 
        
 
         
-          
-
-
-        
-
-        
-
+    
 
 
 ###########################automation code for ProductCReateView############################3

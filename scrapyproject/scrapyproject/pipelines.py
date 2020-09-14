@@ -8,12 +8,13 @@
 
 class ScrapyprojectPipeline(object):
     def __init__(self,*args, **kwargs):
+        pass
 
-        print('4'*50)
+        # print('4'*50)
 
     @classmethod
     def from_crawler(cls, crawler):
-        print('3'*50)
+        # print('3'*50)
 
         return cls(
         unique_id=crawler.settings.get('unique_id'), # this will be passed from django view
@@ -22,17 +23,17 @@ class ScrapyprojectPipeline(object):
         )
 
     def process_item(self, item, spider):
-        print('6'*50)
+        # print('6'*50)
 
-        for i in range(20):
-            print("helooooooooooooooooooooooo")
-        print()
-        print("current price in pipeline is ",item['current_price'])
-        print()
+        # for i in range(20):
+        #     print("helooooooooooooooooooooooo")
+        # print()
+        # print("current price in pipeline is ",item['current_price'])
+        # print()
         if item['current_price']!=-999 and item['current_price']!=-1.00:
             item.save()
-        for i in range(20):
-            print("dddddonnnnnneeeeeeeooooooooooooooooooooo")
+        # for i in range(20):
+        #     print("dddddonnnnnneeeeeeeooooooooooooooooooooo")
         return item
 
 

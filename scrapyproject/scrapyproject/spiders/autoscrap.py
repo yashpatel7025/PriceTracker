@@ -22,13 +22,7 @@ class AutoScrap(scrapy.Spider):
 			self.check=1
 			self.product_object=kwargs.get('product_object')
 			self.url = self.product_object.product_url
-			self.start_urls=[self.url]
-
-
-
-			
-
-			
+			self.start_urls=[self.url]		
 		else:
 			self.check=0
 
@@ -38,10 +32,6 @@ class AutoScrap(scrapy.Spider):
 			print('2'*50)
 			self.start_urls=[self.url]
 			self.author=kwargs.get('author')
-			#print('2end'*20)
-
-			#print(self.url)
-			#print(self.d_price)
 			
 	        # We are going to pass these args from our django view.
 	        # To make everything dynamic, we need to override them inside __init__ method
@@ -69,10 +59,6 @@ class AutoScrap(scrapy.Spider):
 					except :
 						current_price = "Not available"
 
-						
-            
-
-			
 			if current_price != "Not available":
 				try:
 					#price = current_price.replace(",", "")
@@ -88,15 +74,15 @@ class AutoScrap(scrapy.Spider):
 			print(current_price)
 			print('+'*50)'''
 
-			print('old current price in database is ',self.product_object.current_price )
-			print('old desire price in database ',self.product_object.desire_price )
-			print('new scraped current price is ',price )
+			# print('old current price in database is ',self.product_object.current_price )
+			# print('old desire price in database ',self.product_object.desire_price )
+			# print('new scraped current price is ',price )
 			
 			self.product_object.current_price=price
 
 			if price!=-999 and price!=-1.00:
 				    self.product_object.save()
-				    print("price changed ",self.product_object.current_price)
+				    # print("price changed ",self.product_object.current_price)
 
 
 				    from django.core.mail import send_mail
@@ -113,14 +99,15 @@ class AutoScrap(scrapy.Spider):
 				    		send_mail(subject, message, from_email,recipients_list)
 				    		print("mail sent")
 				    except:
-				    	print(f'price for product {p.title} is not validdddddddddddd ')  
+				    	pass
+				    	# print(f'price for product {p.title} is not validdddddddddddd ')  
 
 
-			print('Yessssssss checkkkkkkk doneeeeeeeeeeee')
-			print()
+			# print('Yessssssss checkkkkkkk doneeeeeeeeeeee')
+			# print()
 
 		else:
-			print('5'*50)
+			# print('5'*50)
 
 			item_obj=ScrapyprojectItem()#this class has all field that are in my Product database
 
@@ -129,9 +116,9 @@ class AutoScrap(scrapy.Spider):
 			try:
 
 				m=response.xpath("//span[@id='productTitle']/text()").extract()
-				print()
-				print(m)
-				print()
+				# print()
+				# print(m)
+				# print()
 				m=m[0]
 				
 				item_obj['title']=m.strip()#removes spaces and \n we got in title
@@ -141,7 +128,7 @@ class AutoScrap(scrapy.Spider):
 				item_obj['desire_price']=self.d_price
 				item_obj['product_url']=self.url
 			except Exception:
-				print("nnnnnnooooooooooooooooooooooooooooooooooooooooooo")
+				# print("nnnnnnooooooooooooooooooooooooooooooooooooooooooo")
 				traceback.print_exc()#we are using setup()to do the job of reactor()
 				                     #so when something erroe occurs while scraping then it doesnt throw
 				                     #errors on its own..directly cloae the spyder
@@ -158,9 +145,9 @@ class AutoScrap(scrapy.Spider):
 
 			try:
 				 current_price= response.css('span#priceblock_ourprice::text').extract()
-				 print()
-				 print(current_price)
-				 print()
+				 # print()
+				 # print(current_price)
+				 # print()
 				 current_price=current_price[0]
 
 			except Exception:

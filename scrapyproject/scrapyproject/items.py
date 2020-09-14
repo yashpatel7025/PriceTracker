@@ -66,7 +66,7 @@ from track.models import Product
     #we have first install scrapy_djangoitem
     
 class ScrapyprojectItem(DjangoItem): 
-        print('1'*50)
+        # print('1'*50)
         django_model = Product
     #by writing this now we have items here directly from database.....we are telling this that we dont 
     #want to use scrapy.fields()...insted i am using django model..and that model is Product()
