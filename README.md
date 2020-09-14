@@ -13,13 +13,13 @@ Integrate ``Flipkart.com, AJIO.com, Snapdeal.com `` and other popular e-commerce
 - Below screen shows Total 12 Prodcts are tracked by website for user yashpatel7025, and one of the product that has been tracked is shown below with 
 ``Name, Price, Product Image`` are scraped from ***Amazon.in*** and it will continue to scrap it ***every 15 minutes***
 
-<img src="./User_interface_Images_of_Web_View/1.JPG" width="1000" height="500">
+<img src="./User_interface_Images_of_Web_View/1.JPG" width="1000" height="400">
 
 ---
 
 - Below screen shows that price of the product has been ***reduced*** below ***desired price of the user***, user would have got email alert for the same
 
-<img src="./User_interface_Images_of_Web_View/2.JPG" width="950" height="450">
+<img src="./User_interface_Images_of_Web_View/2.JPG" width="950" height="400">
 
 ---
 
