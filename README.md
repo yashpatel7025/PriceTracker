@@ -9,5 +9,5 @@ it helps user to save time as they don't need to manually open the amazon.in and
 Integrate Flipkart.com, AJIO.com, Snapdeal.com and other popular e-commerce websites in india
 
 
-<img src="./User_interface_Images_of_Web_View/1.jpg" width="800" height="400">
+<img src="./User_interface_Images_of_Web_View/1.JPG" width="800" height="400">
 
