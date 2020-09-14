@@ -19,7 +19,7 @@ Integrate ``Flipkart.com, AJIO.com, Snapdeal.com `` and other popular e-commerce
 
 - Below screen shows that price of the product has been ***reduced*** below ***desired price of the user***, user would have got email alert for the same
 
-<img src="./User_interface_Images_of_Web_View/2.JPG" width="950" height="500">
+<img src="./User_interface_Images_of_Web_View/2.JPG" width="950" height="450">
 
 ---
 
