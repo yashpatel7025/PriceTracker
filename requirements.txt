@@ -15,7 +15,7 @@ cloudpickle==1.1.1
 colorama==0.4.1
 constantly==15.1.0
 crochet==1.9.0
-cryptography==2.7
+cryptography==3.2
 cssselect==1.0.3
 cycler==0.10.0
 DateTime==4.3
